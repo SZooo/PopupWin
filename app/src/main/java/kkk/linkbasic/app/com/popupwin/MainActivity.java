@@ -6,6 +6,13 @@ import android.view.Gravity;
 import android.view.View;
 import android.widget.Toast;
 
+/**
+ * @author Nicholas.Huang
+ * @Declaration: 展示页面
+ * @Email: kurode@sina.cn
+ * <p>
+ * 17-12-17 下午6:27
+ **/
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     PicturesPopupWindows popupWindows;
@@ -22,20 +29,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Toast.makeText(MainActivity.this, path, Toast.LENGTH_LONG).show();
             }
         });
-
         findViewById(R.id.btn_pop).setOnClickListener(this);
-
     }
 
     @Override
     public void onClick(View v) {
-
         switch (v.getId()) {
             case R.id.btn_pop:
                 popupWindows.showAtLocation(rootview, Gravity.CENTER, 0, 0);
                 break;
-
         }
-
     }
 }
